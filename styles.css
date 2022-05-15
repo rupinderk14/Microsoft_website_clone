@@ -138,10 +138,10 @@ header .right-menu .dropdown-menu span:hover{
       color: rgba(0, 0, 0, 0.8);
       font-size: 1.2em;
   }
-  input{
+  #check01{
       display: none;
   }
-  input:checked~.dropdown-list{
+  #check01:checked~.dropdown-list{
       display: block;
   }
 /* search */
@@ -190,10 +190,15 @@ header .right-menu .sign-in span{
     box-sizing: border-box;
     padding: 5px;
 }
-.las.la-bars {
+.las.la-bars, .close {
     font-size: 2em;
   }
-  .bars {
+  .close{
+    color: white;
+    float: right;
+    padding: 0.5em;
+  }
+  .bars, .close {
     display: none;
     border: none;
     background-color: transparent;
@@ -442,8 +447,29 @@ footer nav ul li{
           grid-template-columns: 20% 80%;
           padding: 10px;
         }
-        header .navbar{
+        .navbar{
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            top: 0;
+            background-color: #000;
+            height: 100vh;
+            opacity: 0.95;
+            width: 80%;
             display: none;
+         }
+         header .navbar ul{
+             display: block;
+             margin-top: 2em;
+         }
+         header .navbar ul li a{
+             color: #fff;
+            font-size: 1em;
+            display: block;
+            padding: 1em 0;
+         }
+         header .navbar ul li a:hover{
+             font-weight: bold;
         }
         .module-boxes img {
             width: 20px;
@@ -451,7 +477,7 @@ footer nav ul li{
         .logo {
             flex-grow: 1;
         }
-            .bars {
+            .bars, .close {
             display: block;
             cursor: pointer;
           }
