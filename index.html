@@ -18,11 +18,12 @@
 <body>
     <header>
         <div class="container">
-            <button type="button" class="bars"><i class="las la-bars"></i></button>
+            <button type="button" class="bars" id="openbtn" onclick="openfun()"><i class="las la-bars"></i></button>
             <div class="logo">
                 <a href="https://www.microsoft.com">      <img src="images/logo.png" alt="Microsoft-logo"></a>
             </div>
-            <nav class="navbar">
+            <nav class="navbar" id="navbar">
+                <button type="button" class="close" id="closebtn" onclick="closefun()"><i class="las la-times"></i></button>   
                 <ul>
                     <li><a href="#">Microsoft 365</a></li>
                     <li><a href="#">Office</a></li>
@@ -341,7 +342,13 @@
         </div>
     </footer>
     <script>
-      
+        function closefun(){
+            document.getElementById('navbar').style.display = "none";
+        }
+    
+        function openfun(){
+            document.getElementById('navbar').style.display = "block";
+        }      
     </script>
 </body>
 </html>
